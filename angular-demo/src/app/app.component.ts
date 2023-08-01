@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { GitIssueService } from './services/git-issue.service';
+import { GitIssue } from './interfaces/gitIssue';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,7 @@ import { GitIssueService } from './services/git-issue.service';
 
 export class AppComponent {
   title = 'angular-demo';
-  issues: any[] = [];
+  issues: GitIssue[] = [];
 
   constructor(private gitIssueService: GitIssueService) {}
 
@@ -17,7 +18,10 @@ export class AppComponent {
     this.gitIssueService.getOpenIssues().subscribe(
       (data: any) => {
         this.issues = data;
-        console.log('issues', this.issues);
+        // console.log('issues', this.issues);
+        this.issues.forEach(issue => {
+          console.log('title', issue.title);
+        })
       },
       (error: any) => {
         console.error('Error fetching data:', error);
