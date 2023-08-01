@@ -1,0 +1,16 @@
+<mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{ issue.title }}</mat-card-title>
+      <mat-card-subtitle>{{ issue.user.login }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>Number: {{ issue.number }}</p>
+      <p>State: {{ issue.state }}</p>
+      <p>Created At: {{ issue.created_at | date }}</p>
+      <p>Comments: {{ issue.comments }}</p>
+      <p>URL: <a href="{{ issue.html_url }}" target="_blank">{{ issue.html_url }}</a></p>
+      <!-- Add more important properties as needed -->
+    </mat-card-content>
+  </mat-card>
+  

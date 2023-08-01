@@ -9,11 +9,13 @@ import { CardWrapperComponent } from './components/card-wrapper/card-wrapper.com
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
+import { IssueCardComponent } from './issue-card/issue-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CardWrapperComponent
+    CardWrapperComponent,
+    IssueCardComponent
   ],
   imports: [
     BrowserModule,
