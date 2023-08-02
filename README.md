@@ -14,14 +14,15 @@ Clone the repository.
 
 Create and activate a virtual environment (optional but recommended):
 ```bash
-python -m venv venv
-source venv/bin/activate
+python -m venv env
+source env/bin/activate
 ```
 
 Install dependencies
 ```bash
 pip install django
 pip install djangorestframework
+pip install requests 
 python -m pip install django-cors-headers
 ```
 
