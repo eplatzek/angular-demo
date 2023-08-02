@@ -45,4 +45,31 @@ The end point for our github issue can be veried using curl
 curl http://127.0.0.1:8000/proxy/d3-d3-issues/
 ```
 
-## Django REST Framework Backend
+## Angular App Setup
+
+### Prerequisites
+- Node.js (LTS version)
+- npm (Node Package Manager)
+
+### Installation
+
+Change directory to the Angular app:
+```bash
+cd git-issue-angular-app
+```
+
+Install the required dependencies:
+```bash
+npm install
+```
+
+### Run the Development Server
+Start the Angular development server:
+```bash
+npm start
+```
+
+### Verify
+The Angular app should now be running at http://localhost:4200/.
+
+Open your web browser and visit http://localhost:4200/ to see the Angular app in action, which will interact with the Django REST Framework backend running at http://127.0.0.1:8000/. The two components are now set up and communicating with each other.
