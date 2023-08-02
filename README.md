@@ -1,4 +1,4 @@
-# Django REST Framework Backend Setup
+# Django REST Framework + Angular Setup
 
 This repository contains a Django REST Framework backend and an Angular app. Follow the steps below to set up and run both components.
 
