@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-state-filter',
@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./state-filter.component.scss']
 })
 export class StateFilterComponent {
+  @Output() stateChange = new EventEmitter<string>();
 
+  selectedState: string = 'open'; // Default value
+
+  issueStates = [
+    { value: 'open', viewValue: 'Open' },
+    { value: 'closed', viewValue: 'Closed' },
+  ];
+
+  onStateChange() {
+    this.stateChange.emit(this.selectedState);
+  }
 }

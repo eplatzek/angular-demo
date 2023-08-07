@@ -1,1 +1,9 @@
-<p>state-filter works!</p>
+<mat-form-field appearance="fill">
+    <mat-label>Select State</mat-label>
+    <mat-select [(ngModel)]="selectedState" (ngModelChange)="onStateChange()">
+      <mat-option *ngFor="let state of issueStates" [value]="state.value">
+        {{ state.viewValue }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  
