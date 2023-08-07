@@ -11,11 +11,21 @@ import { GitIssue } from './interfaces/gitIssue';
 export class AppComponent {
   title = 'angular-demo';
   issues: GitIssue[] = [];
+  selectedState: string = 'open';
 
   constructor(private gitIssueService: GitIssueService) {}
 
   ngOnInit() {
-    this.gitIssueService.getOpenIssues().subscribe(
+    this.fetchIssues();
+  }
+
+  onStateFilterChange(selectedState: string) {
+    this.selectedState = selectedState;
+    this.fetchIssues();
+  }
+
+  fetchIssues() {
+    this.gitIssueService.getIssuesByState(this.selectedState).subscribe(
       (data: any) => {
         this.issues = data;
         // console.log('issues', this.issues);

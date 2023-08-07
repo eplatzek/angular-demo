@@ -2,7 +2,7 @@
     Github issue tracker for D3
 </h1>
 <hr>
-<app-state-filter></app-state-filter>
+<app-state-filter (stateChange)="onStateFilterChange($event)"></app-state-filter>
 <div *ngFor="let issue of issues">
     <app-issue-card [issue]="issue"></app-issue-card>
 </div>
