@@ -8,11 +8,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
 import { IssueCardComponent } from './issue-card/issue-card.component';
+import { StateFilterComponent } from './components/state-filter/state-filter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    IssueCardComponent
+    IssueCardComponent,
+    StateFilterComponent
   ],
   imports: [
     BrowserModule,
