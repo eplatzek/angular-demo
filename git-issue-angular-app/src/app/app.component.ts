@@ -12,6 +12,7 @@ export class AppComponent {
   title = 'angular-demo';
   issues: GitIssue[] = [];
   selectedState: string = 'open';
+  isLoading: boolean = false;
 
   constructor(private gitIssueService: GitIssueService) {}
 
@@ -25,6 +26,7 @@ export class AppComponent {
   }
 
   fetchIssues() {
+    this.isLoading = true; 
     this.gitIssueService.getIssuesByState(this.selectedState).subscribe(
       (data: any) => {
         this.issues = data;
@@ -35,6 +37,9 @@ export class AppComponent {
       },
       (error: any) => {
         console.error('Error fetching data:', error);
+      },
+      () => {
+        this.isLoading = false;
       }
     );
   }

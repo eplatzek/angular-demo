@@ -9,8 +9,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 import { MatCardModule } from '@angular/material/card';
-import { MatFormFieldModule} from '@angular/material/form-field'
-import { MatSelectModule} from '@angular/material/select'
+import { MatFormFieldModule} from '@angular/material/form-field';
+import { MatSelectModule} from '@angular/material/select';
+import { MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 import { IssueCardComponent } from './issue-card/issue-card.component';
 import { StateFilterComponent } from './components/state-filter/state-filter.component';
@@ -28,6 +29,7 @@ import { StateFilterComponent } from './components/state-filter/state-filter.com
     MatCardModule,
     MatFormFieldModule,
     MatSelectModule,
+    MatProgressSpinnerModule,
     FormsModule,
     HttpClientModule
   ],
