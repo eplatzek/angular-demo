@@ -6,5 +6,6 @@ class GitHubProxyView(APIView):
     base_url = 'https://api.github.com/repos/d3/d3/issues'
 
     def get(self, request, *args, **kwargs):
-        response = requests.get(self.base_url)
+        query_params = request.query_params
+        response = requests.get(self.base_url, params=query_params, *args, **kwargs)
         return Response(response.json())
